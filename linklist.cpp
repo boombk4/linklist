@@ -130,7 +130,7 @@ bool Exit (bool check) {
 
 int main () {
         int number;
-        char choice;
+        int choice;
         bool exit = Exit(false);
         do {
                 system("clear");
@@ -145,11 +145,11 @@ int main () {
                 cin >> choice;
 
                 switch (choice) {
-                case '1': Insert(); break;
-                case '2': Print(); break;
-                case '3': Find(); break;
-                case '4': Remove(); break;
-                case '5': exit = Exit(true); break;
+                case 1: Insert(); break;
+                case 2: Print(); break;
+                case 3: Find(); break;
+                case 4: Remove(); break;
+                case 5: exit = Exit(true); break;
 
                 }
         } while(exit);
