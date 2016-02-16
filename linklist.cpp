@@ -8,7 +8,7 @@ ListItr<int> b;
 ListItr<int> c;
 
 int Insert () {
-        char choice;
+        int choice;
         int number;
         b=a.zeroth();
         system("clear");
@@ -21,24 +21,24 @@ int Insert () {
 
         switch (choice) {
 
-        case '1':
+        case 1:
                 cout << "Insert front number :";
                 cin >> number;
                 b = a.zeroth();
                 a.insert(number,b);
                 break;
 
-        case '2':
+        case 2:
                 cout << "Insert back number :";
                 cin >> number;
                 b = a.findPrevious(NULL);
                 a.insert(number,b);
                 break;
 
-        case '3':
+        case 3:
                 int p;
                 int countList;
-                cout << "Print List\n";
+                cout << "\tPrint List\n";
                 countList = printList(a);
                 if (countList > 0) {
                         do {
@@ -60,7 +60,6 @@ int Insert () {
                         cout << "No element in Linklist.\n";
                         cout << "You can choose choice no 1 or 2 to insert element.";
                         cout << endl;
-                        Insert ();
                 }
 
                 break;
@@ -144,7 +143,6 @@ int main () {
                 cout << "\t5.Exit"<<endl;
                 cout << "\tEnter Choice:\t";
                 cin >> choice;
-                cout << endl;
 
                 switch (choice) {
                 case '1': Insert(); break;

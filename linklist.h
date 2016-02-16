@@ -127,10 +127,12 @@ template<class Object>
 ListItr<Object> List<Object>::find( const Object &x ) const
 {
         ListNode<Object> *itr = header->next;
-        cout<<"ListNode Address is "<<itr<<endl;
-        while( itr != NULL && itr->element != x )
+        while( itr != NULL && itr->element != x ) {
                 itr = itr->next;
-
+        }
+        if(itr!=NULL) {
+                cout<<"ListNode Address is "<<itr<<endl;
+        }
         return ListItr<Object>( itr );
 }
 
